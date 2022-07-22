@@ -1,14 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
+import NavBar from './components/NavBar/NavBar';
+
+
 
 function App() {
-  return (
+  return <>
 
     //JSX
     <div className="App">
-       <h1> Bievenido a Madi </h1>
+       
+
+         <NavBar />   
     </div>
-  );
+
+    
+    </>;
 }
 
 export default App;
+
