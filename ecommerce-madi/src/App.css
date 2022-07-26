@@ -1,20 +1,43 @@
 @import url('https://fonts.googleapis.com/css2? family= Kanit:ital,wght@1,500 & family= Radio+Canada:ital,wght@1,500 & display=swap');
 
-.navbar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: beige;
-}
+
 
 h1 {
     font-size: 30px;
     margin-left: 50px;
 }
 
-img {
+.logo {
+    margin-left: 50px;
     height: 50px;
 }
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    background-color: beige;
+    
+}
+
+
+.botones {
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+.carrito {
+    text-decoration: none;
+    height: 30px;
+    border-radius: 5px;
+    background-color: white;
+    
+}
+
+
 
 ul{
     display:flex;
@@ -25,4 +48,23 @@ li{
     display: flex;
     align-items: flex-end;
     margin: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    padding-top: 50px;
+    
+    
+    
+}
+
+.container-products {
+   margin-left: 50px;
+   padding-top: 50px;
+}
+
+.musculosa {
+    height: 200px;
 }
