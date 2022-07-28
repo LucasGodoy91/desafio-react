@@ -1,8 +1,8 @@
 
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import ItemContainer from './components/ItemContainer/ItemContainer';
-import ItemList from './components/ItemListContainer/ItemList';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+
 
 
 
@@ -17,7 +17,8 @@ function App() {
     </div>
 
     <div className='container-products'>
-      <ItemContainer />
+      <ItemListContainer />
+      
       
     </div>
 
