@@ -22,9 +22,9 @@ h1 {
 
 
 .botones {
-    color: white;
-    background-color: black;
-    border-radius: 5px;
+    color: black;
+    background-color: white;
+    border:none;
     text-decoration: none;
 }
 
@@ -70,12 +70,17 @@ li{
 }
 
 .item-product {
+    border: 10px;
+    border-radius: 1px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-content: space-around;
     align-items: center;
+    position: relative;
 }
 
-.musculosa {
+.img-prod {
     height: 200px;
+    margin: 20px;
 }

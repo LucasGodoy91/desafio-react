@@ -3,6 +3,7 @@
     "@material-ui/icons": "^4.11.3",
     "@mui/icons-material": "^5.8.4",
     "@mui/styled-engine": "^5.8.7",
+    "react-router-dom": "^6.3.0",
     "sass": "^1.53.0"
   },
   "devDependencies": {

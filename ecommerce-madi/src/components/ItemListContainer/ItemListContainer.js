@@ -1,24 +1,42 @@
-import ItemProduct from "../ItemProduct/ItemProduct"
+
+import products from "../../utils/products.mock"
+import { useEffect, useState } from "react"
+import ItemList from "../ItemList/ItemList"
 
 const ItemListContainer = ({section}) => {
-     const product1 =  {
-        title: "Musculosa",
-        price: 2980,
-        image: 'musculosa.jpeg',
-    } 
     
-    const product2 = {
-        title: "Leggin",
-        price: 4980,
-        image: 'leggin.jpeg',
-    }
+
+    const [listProducts, setListProducts] = useState([])
+     
+    const getProducts = new Promise ( ( resolve, reject) => {
+        setTimeout ( () => {resolve (products)}, 2000)
+        
+    } )
+
+    useEffect (() => {
+        getProducts
+    .then ( (res) => {
+        setListProducts(res)
+    })
+    .catch ( (error) => {
+        console.log ("Fallo")
+    })
+    .finally ( () => {})
+    }, [])
+
+    
+
+   
+    
     return (
-        <div className="container-products">
-            <h2> {section} </h2>
+        <div>
+            <h2> PRODUCTOS DESTACADOS </h2>
             
-            <ItemProduct data={product1} />
-            <ItemProduct data= {product2} />
-            
+            <div className="container-products">
+               
+            < ItemList dataProducts={listProducts}/>    
+                
+            </div>
         </div>
     )
         

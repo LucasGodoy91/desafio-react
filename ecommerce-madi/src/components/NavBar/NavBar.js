@@ -14,9 +14,9 @@ const NavBar = () => {
                   
             </ul>
 
-            <div>
+            
                <button> <img src="./img/carrito.png" class="carrito" /> </button>  
-            </div>
+            
             
         </div>   )
 }
