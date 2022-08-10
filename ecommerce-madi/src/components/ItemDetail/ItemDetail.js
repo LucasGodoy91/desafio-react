@@ -1,8 +1,8 @@
 import ItemCount from "../ItemCount/ItemCount"
 
 
-const ItemDetail =  ({data}) => {
-    const { title, image, price ,stock } = data
+const ItemDetail =  ({itemProduct}) => {
+    const { title, image, price ,stock } = itemProduct
 
     return (
 

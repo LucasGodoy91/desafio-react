@@ -3,25 +3,24 @@ import { useEffect, useState } from "react"
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 
-const ItemDetailContainer = ({section}) => {
+const ItemDetailContainer = () => {
 
-    const[itemProduct, setItemProduct] = useState ([])
+    const[itemProduct, setItemProduct] = useState ({})
 
-    const getItem = new Promise((resolve, reject) => {
-        setTimeout ( () => {resolve (item)}, 2000)
-    })
+    
 
     
     useEffect (() => {
-        getItem
-    .then ( (res) => {
-        setItemProduct(res)
-    })
-    .catch ( (error) => {
-        console.log ("Fallo")
-    })
-    .finally ( () => {})
+        const getItemProduct = new Promise (res => {
+            setTimeout (() => {
+                res (item);
+            }, 3000);
+        });
+        
+    getItemProduct.then (res => 
+        setItemProduct(res));
     }, [])
+    
 
     
     return (
@@ -30,7 +29,7 @@ const ItemDetailContainer = ({section}) => {
             
             <div className="container-products">
                
-            < ItemDetail dataProducts={itemProduct}/>   
+            < ItemDetail itemProduct={itemProduct}/>   
                 
             </div>
         </div>
