@@ -1,8 +1,9 @@
 import ItemCount from "../ItemCount/ItemCount"
 
-const ItemProduct = ({data}) => {
 
-    const { title, image, price ,stock } = data
+const ItemProduct = ({data}) => {
+    
+    const { title, image, price , } = data
 
     return (
 
@@ -10,9 +11,11 @@ const ItemProduct = ({data}) => {
             <img src={`../img/${image} `} class="img-prod" alt="imagen-producto" />
             <p>{title}</p>
             <span>{price}</span>
+            
             <button> Ver detalle </button>
             
             <ItemCount />
+
         </div>
 )
 
