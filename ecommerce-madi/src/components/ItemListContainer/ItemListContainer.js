@@ -3,25 +3,19 @@ import products from "../../utils/products.mock"
 import { useEffect, useState } from "react"
 import ItemList from "../ItemList/ItemList"
 
-const ItemListContainer = ({section}) => {
+
+const ItemListContainer = () => {
     
 
     const [listProducts, setListProducts] = useState([])
      
-    const getProducts = new Promise ( ( resolve, reject) => {
-        setTimeout ( () => {resolve (products)}, 2000)
-        
-    } )
-
-    useEffect (() => {
-        getProducts
-    .then ( (res) => {
-        setListProducts(res)
-    })
-    .catch ( (error) => {
-        console.log ("Fallo")
-    })
-    .finally ( () => {})
+    useEffect ( () => {
+        const getItemProduct = new Promise (res => {
+            setTimeout (() => {
+                res (products);
+            }, 2000);
+        });
+        getItemProduct.then (res => setListProducts(res));
     }, [])
 
     
@@ -30,11 +24,11 @@ const ItemListContainer = ({section}) => {
     
     return (
         <div>
-            <h2> PRODUCTOS DESTACADOS </h2>
+            
             
             <div className="container-products">
                
-            < ItemList dataProducts={listProducts}/>    
+                < ItemList dataProducts={listProducts}/>    
                 
             </div>
         </div>

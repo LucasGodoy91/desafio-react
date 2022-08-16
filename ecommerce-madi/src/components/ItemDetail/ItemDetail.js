@@ -2,7 +2,7 @@ import ItemCount from "../ItemCount/ItemCount"
 
 
 const ItemDetail =  ({itemProduct}) => {
-    const { title, image, price ,stock } = itemProduct
+    const { title, image, price ,stock } = itemProduct 
 
     return (
 

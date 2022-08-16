@@ -18,6 +18,7 @@ h1 {
     align-items:center;
     background-color: white;
     
+    
 }
 
 
@@ -39,15 +40,18 @@ h1 {
 
 
 
-ul{
+ul {
     display:flex;
     align-items: flex-end;
+    text-decoration: none;
 }
 
 li{
     display: flex;
     align-items: flex-end;
     margin: 30px;
+    
+    
 }
 
 .card {
@@ -57,16 +61,12 @@ li{
     padding-top: 50px;
     margin: 100px;
 
-    
-    
 }
 
 .container-products {
-    display: flex;
-    flex-direction:row;
-    align-items: baseline;
-    margin-left: 50px;
-    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1em;
 }
 
 .item-product {
@@ -74,6 +74,7 @@ li{
     border-radius: 1px;
     display: flex;
     flex-direction: column;
+    column-count: 3;
     justify-content: center;
     align-content: space-around;
     align-items: center;
@@ -81,6 +82,36 @@ li{
 }
 
 .img-prod {
-    height: 200px;
+    height: 300px;
     margin: 20px;
 }
+
+.dropdown a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+}
+
+.dropdown {
+    display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content :hover .dropdown {
+    display: block;
+    
+}
+
+
+
+;

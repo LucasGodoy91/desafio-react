@@ -10,8 +10,8 @@ const ItemProduct = ({data}) => {
             <img src={`../img/${image} `} class="img-prod" alt="imagen-producto" />
             <p>{title}</p>
             <span>{price}</span>
-            <span> Stock {stock} </span>
-            <button> Comprar </button>
+            <button> Ver detalle </button>
+            
             <ItemCount />
         </div>
 )

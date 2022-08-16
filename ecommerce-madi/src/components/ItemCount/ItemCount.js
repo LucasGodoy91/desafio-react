@@ -10,6 +10,8 @@ const ItemCount = () => {
     
     const subtractNumber = () => {
         setContador (contador - 1)
+
+        
     }
 
     return (
