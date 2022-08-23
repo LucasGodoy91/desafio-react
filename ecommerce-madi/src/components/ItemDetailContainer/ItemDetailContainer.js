@@ -1,6 +1,8 @@
 import item from "../../utils/item.mock";
 import { useEffect, useState } from "react"
 import ItemDetail from "../ItemDetail/ItemDetail";
+import products from "../../utils/products.mock";
+import { useParams } from "react-router-dom";
 
 
 const ItemDetailContainer = () => {
@@ -8,7 +10,19 @@ const ItemDetailContainer = () => {
     const[itemProduct, setItemProduct] = useState ({})
 
     
+    const {id} = useParams()
 
+    useEffect (() => {
+        filterById()
+    }, [])
+
+    const filterById = () => {
+        products.some((product) => {
+            if(product.id == id) {
+                setItemProduct(product)
+            }
+        })
+    }
     
     useEffect (() => {
         const getItemProduct = new Promise (res => {

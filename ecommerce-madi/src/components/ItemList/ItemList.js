@@ -3,9 +3,9 @@ import ItemProduct from "../ItemProduct/ItemProduct"
 const ItemList = ({dataProducts}) => {
     return  (
         <>
-        {dataProducts.map( (product) =>{
+        {dataProducts.map( (products) =>{
             return (
-                <ItemProduct key={product.id} data= {product} />
+                <ItemProduct key={products.id} data= {products} />
             )
         })}
         </>
