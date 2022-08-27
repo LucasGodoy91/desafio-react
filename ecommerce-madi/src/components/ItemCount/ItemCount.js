@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-const ItemCount = () => {
+const ItemCount = ({setCantidadSeleccionada}) => {
     const [ contador, setContador] = useState(1) 
     
     const addNumber = () => {
@@ -14,13 +14,21 @@ const ItemCount = () => {
         
     }
 
-    return (
+   
 
+    const onAdd = () => {
+        setCantidadSeleccionada(contador)
+    }
+
+    return (
+        <>
         <div className="count">
-            <p> {contador} </p> 
-            <button onClick={subtractNumber}> - </button>            
-            <button onClick={addNumber}> + </button>
+             
+            <button onClick={subtractNumber}> - </button> <p> {contador} </p>  <button onClick={addNumber}> + </button>          
+            
         </div>
+        <button onClick={onAdd}> COMPRAR </button>
+        </>
     )
 }
 

@@ -13,10 +13,10 @@ const NavBar = () => {
                  <div className="dropdown-content">
                  <li> <button className="botones"> Productos </button> 
                     <div className="dropdown">
-                        <a><button> Musculosas </button></a>
-                        <a><button> Leggins </button></a>
-                        <a><button> Sudaderas </button></a>
-                        <a><button> Tops </button></a>
+                     <Link to="/productos/:category">   <a><button> Musculosas </button></a> </Link>
+                     <Link to="/productos/:category">   <a><button> Leggins </button></a> </Link>
+                     <Link to="/productos/:category">   <a><button> Sudaderas </button></a> </Link>
+                     <Link to="/productos/:category">   <a><button> Tops </button></a> </Link>
                     </div> 
                 </li> 
                 </div></Link> 

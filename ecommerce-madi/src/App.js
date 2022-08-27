@@ -19,6 +19,7 @@ function App() {
          <Route path= "/contacto" element= {<Contacto />}/>
          <Route path= "/productos" element= {<Productos />}/>
          <Route path= "/productos/:id" element= {<Detalle />}/>
+         <Route path= "/productos/:category" element={<Productos />}/>
 
           
 

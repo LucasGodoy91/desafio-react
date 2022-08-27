@@ -1,8 +1,11 @@
 import ItemCount from "../ItemCount/ItemCount"
+import { useState } from "react"
 
 
 const ItemDetail =  ({itemProduct}) => {
     const { title, image, price ,stock } = itemProduct 
+
+    const [cantidadSeleccionada , setCandidadSeleccionada] = useState(0)
 
     return (
 
@@ -11,8 +14,9 @@ const ItemDetail =  ({itemProduct}) => {
             <p> {title} </p>
             <span>{price}</span>
             <span> Stock {stock} </span>
-            <button> Comprar </button>
-            <ItemCount />
+            
+           {cantidadSeleccionada > 0 ? <button> TERMINAR COMPRA </button> : <ItemCount setCantidadSeleccionada={setCandidadSeleccionada}/>}
+            
         </div>
     )
 }

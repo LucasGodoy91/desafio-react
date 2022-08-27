@@ -10,7 +10,24 @@ const ItemDetailContainer = () => {
     const[itemProduct, setItemProduct] = useState ({})
 
     
+
+    const {category} = useParams()
+    
     const {id} = useParams()
+
+    const filterCategory = products.filter ((products) => products.category === category);
+
+     
+    const itemProducts = () => new Promise ((resolve, reject) => {
+        setTimeout (() => {
+            if (category) {
+                resolve (filterCategory);
+            } else {
+                resolve (products)
+            }
+        } ,2000 );
+    });
+    
 
     useEffect (() => {
         filterById()
@@ -23,6 +40,8 @@ const ItemDetailContainer = () => {
             }
         })
     }
+
+    
     
     useEffect (() => {
         const getItemProduct = new Promise (res => {

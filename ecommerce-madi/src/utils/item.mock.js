@@ -3,7 +3,8 @@ const item = {
         price: 2980,
         image: 'musculosa.jpeg',
         stock: 10,
-        id: 1, 
+        id: 1,
+        category: 'musculosas',
 }
        
 export default item
