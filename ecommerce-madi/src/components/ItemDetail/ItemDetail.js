@@ -12,10 +12,10 @@ const ItemDetail =  ({itemProduct}) => {
         <div className="item-product">
             <img src={`../img/${image} `} class="img-prod" alt="imagen-producto" />
             <p> {title} </p>
-            <span>{price}</span>
+            <span> $ {price}</span>
             <span> Stock {stock} </span>
             
-           {cantidadSeleccionada > 0 ? <button> TERMINAR COMPRA </button> : <ItemCount setCantidadSeleccionada={setCandidadSeleccionada}/>}
+           {cantidadSeleccionada > 0 ? <button> TERMINAR COMPRA </button> : <ItemCount setCantidadSeleccionada={setCandidadSeleccionada} productData={itemProduct} />}
             
         </div>
     )

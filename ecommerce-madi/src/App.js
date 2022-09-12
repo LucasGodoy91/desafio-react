@@ -6,12 +6,14 @@ import Inicio from   './pages/Inicio';
 import Contacto from './pages/Contacto';
 import Productos from './pages/Productos';
 import Detalle from './pages/Detalle';
+import CartProvider from './components/context/CartContext';
 
 
 
 function App() {
   return (  
     //JSX
+    <CartProvider>
   < BrowserRouter > 
       <NavBar />
       <Routes>
@@ -26,7 +28,7 @@ function App() {
           
       </Routes> 
   </BrowserRouter>
-    
+  </CartProvider>  
 
     
   );

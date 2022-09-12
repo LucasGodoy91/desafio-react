@@ -2,9 +2,14 @@ import ItemCount from "../ItemCount/ItemCount"
 import { Link } from 'react-router-dom'
 
 
+
 const ItemProduct = ({data}) => {
     
     const { title, image, price , id ,} = data
+
+    
+
+    
 
     return (
 

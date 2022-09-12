@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import CartWidget from "../NavBar/CartWidget";
 
 const NavBar = () => {
     return(
@@ -24,8 +24,8 @@ const NavBar = () => {
                   
             </ul>
 
-            
-               <button> <img src="./img/carrito.png"/> </button>  
+            < CartWidget />
+                 
             
             
         </div>   )
