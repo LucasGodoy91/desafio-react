@@ -18,9 +18,7 @@ h1 {
     align-items:center;
     background-color: white;
     position:relative;
-    
-    
-    
+       
 }
 
 
@@ -126,6 +124,25 @@ li{
     
 }
 
+.cart-widget-container {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    
+}
 
 
-;
+.cart-widget {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 15px;
+   
+}
+
+.img-widget {
+    height: 150px
+}
+

@@ -7,21 +7,37 @@ const CartProvider = ({children}) => {
     
     const  [ cartProducts, setCartProducts] = useState ([])
 
+    const [ totalProducts, setTotalProducts] = useState (0)
+
     
     const addProductToCart = (product) => {
+        setTotalProducts (totalProducts + 1)
         setCartProducts([...cartProducts, product])
+
     }
 
     const clear = () => {
         setCartProducts([])
     }
+
+    const borrar = (param) => {
+
+        var index = cartProducts.indexOf( param );
+      
+        cartProducts.splice( index, 1 );
+        
+        setCartProducts(cartProducts)
+      
+      }
     
 
     const data = {
         cartProducts,
         setCartProducts,
         clear,
-        addProductToCart
+        borrar,
+        addProductToCart,
+        totalProducts
     }
 
 

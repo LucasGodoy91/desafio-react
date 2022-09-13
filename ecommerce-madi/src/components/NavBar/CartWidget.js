@@ -8,7 +8,7 @@ import { CartContext } from '../context/CartContext';
 const CartWidget = () => {
   const [anchorEl, setAnchorEl] = useState(null);
 
-  const { cartProducts , clear } = useContext (CartContext)
+  const { cartProducts , clear , totalProducts , borrar} = useContext (CartContext)
 
   const open = Boolean(anchorEl);
 
@@ -19,8 +19,11 @@ const CartWidget = () => {
     setAnchorEl(null);
   };
 
+  
+
   return (
     <div>
+      
       <Button
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
@@ -28,7 +31,8 @@ const CartWidget = () => {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        <img src="../img/carrito.png"></img>
+       {cartProducts.lenght !== 0 && <p>{totalProducts}</p>}
+       <img src="../img/carrito.png"></img>
       </Button>
       <Menu
         id="basic-menu"
@@ -37,18 +41,18 @@ const CartWidget = () => {
         onClose={handleClose}
         MenuListProps={{
           'aria-labelledby': 'basic-button',
-        }}
+        }} 
       >
         {cartProducts.map ((product) => {
             return (
-           
-            <div className='' key={product.id}>
-              <img src={`../img/${product.image}`} alt=""/>
-                <div>
-                  <p> {product.title}</p>
-                  <span> $ {product.price} </span>
-                  <span> {product.stock} </span>
-                </div>
+              
+            <div className='cart-widget' key={product.id}>
+              
+              <img src={`../img/${product.image}`} alt="" className='img-widget'/>
+              <span> $ {product.price} </span>
+              <span> {product.stock} </span>
+              <button onClick= {() => borrar ()}> BORRAR </button>
+                
             </div>
 
           )
